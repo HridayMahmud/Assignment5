@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +30,7 @@
 </head>
 <body class="">
    <div id="totalbody" class="totalbody">
-    <header class="mt-14 px-[135px] mb-9">
+    <header class="mt-14 w-[1170px] mx-auto mb-9">
         <nav class="flex flex-col md:flex-row lg:flex-row justify-between items-center">
       
             <h1 class="text-4xl font-extrabold">H-Ticket</h1>
@@ -50,13 +50,17 @@
  
        
     </header>  
+ 
 
-   <div class="background-image mx-[135px] ">
+   <div class="background-image w-[1170px] mx-auto ">
     <section  class=" bg-[url('images/banner.png')]  bg-cover bg-center bg-no-repeat  rounded-3xl h-[550px] ">
         <h1 class="text-[30px] lg:text-[64px] md:text-[64px]  pt-[60px] font-extrabold text-center text-[#FFFFFF]">End-to-End Travel with </h1>
         <h1 class ="text-[30px]  lg:text-[64px] md:text-[64px]   bg-cover font-extrabold text-center text-[#1DD100]">HRIDAY Paribahan</h1>
        <p class=" md:px-[240px] lg:px-[240px] text-center   text-lg font-[400] text-[#FFFFFF]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-       <div class="buttonseall flex justify-center"><button class="allOffer  px-4 py-3 mt-8 mb-[66px] bg-[#1DD100] rounded-xl font-bold">Buy Tickets</button>
+       
+       <div class="buttonseall flex justify-center">
+        <a class="allOffer  px-4 py-3 mt-8 mb-[66px] bg-[#1DD100] rounded-xl font-bold" href="#paribahansection">Buy Tickets</a>
+        
        </div>
 
        <div class="user flex flex-col md:flex-row lg:flex-row gap-6 justify-center">
@@ -85,7 +89,7 @@
     </section>
    </div>
 
-    <div class="px-[135px]">
+    <div class="w-[1170px] mx-auto">
        
       <!-- offer-section-start -->
         <section class="offer mt-[120px]">
@@ -128,9 +132,9 @@
 
     <!-- paribahan-section-start-from-here -->
     
-<main class="bg-[#F7F8F8] rounded-t-[88px] rounded-r-[88px] border-t-[#1DD100] border-2">
+<main  class="bg-[#F7F8F8] rounded-t-[88px] rounded-r-[88px] border-t-[#1DD100] border-2">
     <!-- paribahan-section -->
-    <section class="px-[135px]">
+    <section id="paribahansection" class="w-[1170px] mx-auto">
         <section class="paribahan lg:mt-[120px] text-center p-0 lg:px-[216px] md:px-[216px]">
             <h1 class="text-[40px] font-bold">HRIDAY Paribahan</h1>
                 <p class="text-lg">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
@@ -322,6 +326,9 @@
                         <p class="text-[#030712] text-lg font-semibold ">Grand Total</p>
                         <p id="showgrand-total" class="text-[#030712] text-lg font-semibold ">0</p>
                      </div>
+                     <div class="">
+                     <h1  id="showalert" class="text-red-800 text-lg font-semibold "></h1>
+                     </div>
 
                    
                  </div>
@@ -355,7 +362,7 @@
         </section>
     </main>
 
-    <footer class="bg-[#030712] px-[135px] py-[120px] ">
+    <footer class="bg-[#030712] w-full mx-auto px- py-[120px] ">
         <div class="container1 border-dashed border-b-[1px] border-gray-300 flex flex-col md:flex-row lg:flex-row justify-between ">
 
             <div class="p-ticket">
@@ -399,5 +406,6 @@
 </div>
 
 <script src="script/functionality.js"></script>
+
 </body>
 </html>

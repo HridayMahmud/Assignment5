@@ -1,9 +1,15 @@
+
+
+
+
+
 // hadle input and button for function
 const input = document.getElementById('couponinput');
 const couponbutton = document.getElementById('couponbutton');
 const grandtotal = document.getElementById('showgrand-total');
 const discount = document.getElementById('discount');
 const discountprice = document.getElementById('discountprice');
+const alert = document.getElementById('showalert');
 //couponCode.classList.remove('opacity-50');
 function couponCheck(overallprice,selectedSeat){
   if(selectedSeat===4){
@@ -17,10 +23,6 @@ function couponCheck(overallprice,selectedSeat){
  input.addEventListener('input',function(e){
   let couponCode = input.value;
 
-   // console.log('coupon matched');
-
-  //  couponbutton.style.background ="#1DD100";
-  //  couponbutton.style.color ="white";
    couponbutton.addEventListener('click',function(){
    const counponcontainer = document.getElementById('couponcontainer');
 
@@ -42,8 +44,10 @@ function couponCheck(overallprice,selectedSeat){
      counponcontainer.style.display="none";
 
     }
+    else{
+      alert.innerHTML = "invalid coupon";
+    }
    
-    
     });
 
 });
@@ -202,9 +206,6 @@ function submit(selectedSeat){
 }
 
 
-
-
-
 //select items by class
 const seats = document.getElementsByClassName('item');
 //total seat by default
@@ -212,7 +213,7 @@ const totalSeats = 40;
 const leftseat = document.getElementById('leftseats');
 const availables = document.getElementById('available');
 const showseat = document.getElementById('seatnumber');
-
+leftseat.innerText = totalSeats;
 availables.innerText = totalSeats;
 //function getiing available seatsl
 function getting_availableSeats(selectedSeat){
@@ -230,6 +231,9 @@ showtotalMoney(selectedSeat);
 
 //1.select seat by class function
 selectSeatByClass(seats);
+
+
+
 
 
 
