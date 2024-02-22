@@ -161,21 +161,32 @@ submit(selectedSeat);
 }
 
 function removeBodyshowSection(totalbody){
-  const removesec = document.getElementById(totalbody);
-  removesec.classlist.add('hidden');
+  //const removesec = document.getElementById(totalbody);
+  totalbody.style.display= "none";
  
 }
 
+
+const homepage = document.getElementById('buttonbacktohomepage');
+
 function addSuccessfullSection(successcontainer){
-  const addsection = document.getElementById(successcontainer);
-   addsection.classList.remove('hidden');
+  //const addsection = document.getElementById(successcontainer);
+   successcontainer.style.display = "block";
+   //backtohomapage
+   homepage.addEventListener('click',function(){
+    totalbody.style.display = "block";
+    successcontainer.style.display = "none";
+    window.location.reload();
+  
+    });
+   
 }
 
 //submit function
 const submitbutton = document.getElementById('submit');
 const phonnumberinput = document.getElementById('phonenumber');
-// const successcontainer = document.getElementById('success-container');
-// const totalbody = document.getElementById('totalbody');
+const successcontainer = document.getElementById('success-container');
+const totalbody = document.getElementById('totalbody');
 function submit(selectedSeat){
   phonnumberinput.addEventListener('input',function(){
     if(selectedSeat>=1 && phonnumberinput.value!==null){
@@ -184,11 +195,15 @@ function submit(selectedSeat){
     }
   });
   submitbutton.addEventListener('click',function(){
-    removeBodyshowSection('totalbody');
-    addSuccessfullSection('success-container');
+    removeBodyshowSection(totalbody);
+    addSuccessfullSection(successcontainer);
   });
- 
+
 }
+
+
+
+
 
 //select items by class
 const seats = document.getElementsByClassName('item');
